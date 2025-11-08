@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Pão Quentinho — Padaria</title>
+  <meta name="description" content="Padaria Pão Quentinho — O sabor que aquece o seu dia.">
+  <link rel="stylesheet" href="css/style.css">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="brand">
+          <div class="logo">PQ</div>
+          <div>
+            <div style="font-size:18px">Pão Quentinho</div>
+            <div style="font-size:12px;color:rgba(255,255,255,0.9)">O sabor que aquece o seu dia</div>
+          </div>
+        </div>
+        <div class="nav-links">
+          <a href="#home">Home</a>
+          <a href="#cardapio">Cardápio</a>
+          <a href="#sobre">Sobre</a>
+          <a href="#contato">Contato</a>
+        </div>
+      </nav>
+
+      <div class="hero">
+        <div>
+          <h1>Bem-vindo ao Pão Quentinho</h1>
+          <p>Pães frescos feitos todos os dias com fermentação natural. Venha experimentar nossos clássicos e novidades da casa como: pães artesanais, doces e cafés.</p>
+          <a class="cta" href="#cardapio">Ver cardápio</a>
+        </div>
+        <div class="card">
+          <strong>Horário</strong>
+          <p style="margin:6px 0 12px;color:var(--muted)">Seg — Sáb: 06:00 — 20:00 · Dom: 06:00 — 14:00</p>
+          <strong>Peça pelo WhatsApp</strong>
+          <p style="margin:6px 0;color:var(--muted)">Clique no botão verde no canto inferior para iniciar um pedido rápido.</p>
+          <div style="margin-top:12px;display:flex;gap:8px">
+            <a class="cta" style="background:#fff;color:var(--accent);display:inline-block" href="#contato">Fale conosco</a>
+            <a class="cta" style="background:transparent;border:2px solid #fff;color:#fff" href="#pedido">Fazer pedido</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="cardapio">
+      <h2>Cardápio</h2>
+      <p style="color:var(--muted);margin:8px 0 18px">Seleção de pães, doces e bebidas. Preços indicativos — personalizamos por encomenda.</p>
+      <div class="menu-grid">
+        <article class="menu-item card">
+          <img src="licensed-image.jpg" alt="Pão francês">
+          <h4>Pão Francês — R$1,50</h4>
+          <p>Crosta crocante, miolo macio. Ideal pro café da manhã.</p>
+        </article>
+
+        <article class="menu-item card">
+          <img src="delicioso-arranjo-de-rosquinhas-vitrificadas.jpg" alt="Pão de fermentação natural">
+          <h4>Sonho — R$8,50</h4>
+          <p>Arranjo delicioso de donuts glaceados, sabor complexo e textura firme.</p>
+        </article>
+
+        <article class="menu-item card">
+          <img src="croissant-de-massa-folhada-de-chocolate-polvilhado-com-gotas-de-chocolate.jpg" alt="Pão de chocolate">
+          <h4>Croissant de Chocolate — R$12,00</h4>
+          <p>Massa folhada com recheio generoso de chocolate.</p>
+        </article>
+
+        <article class="menu-item card">
+          <img src="Captura de tela 2025-10-21 174743.png" alt="Café espresso">
+          <h4>Café Espresso — R$9,00</h4>
+          <p>Expresso curto, tirado na hora.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="sobre">
+      <h2>Sobre nós</h2>
+      <p style="color:var(--muted)">Fundada em 2025, Pão Quentinho nasceu do amor por fermentações e por compartilhar momentos ao redor da mesa. Produzimos pães diariamente com ingredientes selecionados e práticas sustentáveis.</p>
+    </section>
+
+    <section id="pedido">
+      <h2>Pedido rápido</h2>
+      <p style="color:var(--muted)">Preencha o pedido abaixo e copie o resumo para enviar por WhatsApp ou e-mail.</p>
+      <div class="card">
+      
+        <form id="orderForm">
+          <label>Seu nome
+            <input type="text" id="name" placeholder="Seu nome" required>
+          </label>
+
+          <label>Telefone (WhatsApp)
+            <input type="tel" id="phone" placeholder="(11) 9 9999-9999" required>
+          </label>
+
+          <label>Escolha os itens
+            <select id="item" required>
+              <option value="Pão Francês — R$1,50">Pão Francês — R$1,50</option>
+              <option value="Sourdough — R$12,00">Sourdough — R$12,00</option>
+              <option value="Croissant de Chocolate — R$8,50">Croissant de Chocolate — R$8,50</option>
+              <option value="Café Espresso — R$5,00">Café Espresso — R$5,00</option>
+            </select>
+          </label>
+
+          <div class="flex">
+            <label style="flex:1">Quantidade
+              <input type="number" id="qty" min="1" value="1" required>
+            </label>
+            <label style="flex:2">Observações (opcional)
+              <input type="text" id="notes" placeholder="Ex: sem açúcar, tostado...">
+            </label>
+          </div>
+
+          <button type="submit">Gerar resumo do pedido</button>
+        </form>
+
+        <div id="summary" style="margin-top:12px;display:none">
+          <h4>Resumo do pedido</h4>
+          <pre id="summaryText" style="background:#fafafa;padding:10px;border-radius:8px"></pre>
+          <div style="display:flex;gap:8px;margin-top:8px">
+            <a id="waLink" target="_blank" class="cta" href="#">Enviar por WhatsApp</a>
+            <a id="mailLink" class="cta" href="#" style="background:transparent;border:2px solid var(--accent);color:var(--accent)">Enviar por E‑mail</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contato">
+      <h2>Contato & Localização</h2>
+      
+      <div class="card card-contato">
+        <div>
+          <p style="color:var(--muted)"><strong>Endereço:</strong> Av Paulista 1100-Bela Vista, São Paulo - SP</p>
+          <p style="color:var(--muted)"><strong>Telefone:</strong> (11) 9 9999-9999</p>
+          <p style="color:var(--muted)"><strong>Email:</strong> contato@paoquentinho.com</p>
+
+          <h4>Abra para nós</h4>
+          <p style="color:var(--muted)">Atendimento presencial e retirada no balcão. Fazemos encomendas para festas; consulte prazo.</p>
+        </div>
+        <div>
+          <iframe title="Mapa — Pão Quentinho" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.0!2d-46.633309!3d-23.55052!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59b1b0b0!2sS%C3%A3o%20Paulo!5e0!3m2!1spt-BR!2sbr!4v0000000000000" width="100%" height="220" style="border:0;border-radius:8px" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <a class="whatsapp" href="https://wa.me/5511999999999?text=Olá%20Pão%20Quentinho%20%F0%9F%8D%9E%20Quero%20fazer%20um%20pedido" target="_blank">WhatsApp</a>
+
+  <footer>
+    <div class="container">© <span id="year"></span> Pão Quentinho — Todos os direitos reservados</div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
