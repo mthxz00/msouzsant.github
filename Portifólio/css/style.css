@@ -1,0 +1,180 @@
+/* ============================================= */
+/* 0. Variáveis de Cor (Sua Paleta) e Fontes     */
+/* ============================================= */
+:root {
+    /* Paleta de Cores: Roxo, Dourado, Preto */
+    --cor-fundo: #121212;     /* Preto (Fundo principal) */
+    --cor-fundo-secundario: #1E1E1E; /* Preto (Para os cards) */
+    --cor-primaria: #9B59B6;  /* Roxo (Principal) */
+    --cor-destaque: #F1C40F;  /* Dourado (Destaque) */
+    --cor-texto: #FFFFFF;     /* Branco (Texto) */
+    --cor-texto-secundario: #a0a0a0; /* Cinza claro */
+    
+    /* Fontes */
+    --fonte-principal: 'Poppins', sans-serif;
+}
+
+/* ============================================= */
+/* 1. Estilos Globais                            */
+/* ============================================= */
+body {
+    font-family: var(--fonte-principal);
+    line-height: 1.6;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+}
+
+/* Layout do Container Central */
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Estilo padrão das Seções */
+section {
+    padding: 60px 0;
+    border-bottom: 1px solid #333; /* Linha sutil separando seções */
+}
+
+/* Estilo padrão dos Títulos */
+h2 {
+    font-size: 2.5rem; /* 40px */
+    color: var(--cor-primaria); /* Roxo */
+    margin-bottom: 20px;
+    text-align: center;
+}
+h3 {
+    font-size: 1.8rem;
+    color: var(--cor-destaque); /* Dourado */
+    margin-bottom: 10px;
+}
+h4 {
+    font-size: 1.2rem;
+    color: var(--cor-texto);
+    margin-bottom: 8px;
+}
+p {
+    color: var(--cor-texto-secundario);
+    margin-bottom: 16px;
+}
+
+/* ============================================= */
+/* 2. Header e Navegação                         */
+/* ============================================= */
+header {
+    background-color: var(--cor-fundo-secundario);
+    padding: 20px 0;
+    border-bottom: 2px solid var(--cor-destaque); /* Borda Dourada */
+    position: sticky; /* Opcional: fixa o header no topo */
+    top: 0;
+    z-index: 10;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Seu nome (Logo) */
+#logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--cor-destaque); /* Dourado */
+}
+
+/* Links da Navegação */
+nav ul {
+    display: flex;
+}
+nav li {
+    margin-left: 25px;
+}
+nav a {
+    font-weight: 700;
+    color: var(--cor-primaria); /* Roxo */
+    transition: color 0.3s ease;
+}
+nav a:hover {
+    color: var(--cor-destaque); /* Dourado no hover */
+}
+
+/* ============================================= */
+/* 3. Seções Principais (Cards)                  */
+/* ============================================= */
+
+/* Seção Sobre */
+#sobre p {
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto 16px; /* Centraliza o texto */
+    text-align: center;
+}
+
+/* Card de Projeto (Java Mobile) */
+#experiencia .card-projeto {
+    background-color: var(--cor-fundo-secundario);
+    padding: 30px;
+    border-radius: 8px;
+    border-left: 5px solid var(--cor-primaria); /* Borda lateral Roxa */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Grade de Certificados (HTML, IA) */
+.certificados-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Duas colunas */
+    gap: 25px; /* Espaço entre os cards */
+}
+
+.card-certificado {
+    background-color: var(--cor-fundo-secundario);
+    padding: 25px;
+    border-radius: 8px;
+    border-bottom: 3px solid var(--cor-primaria); /* Borda inferior Roxa */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-certificado:hover {
+    transform: translateY(-5px); /* Efeito de levantar */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* ============================================= */
+/* 4. Contato e Footer                           */
+/* ============================================= */
+
+/* Seção de Contato */
+#contato {
+    text-align: center;
+    border-bottom: none;
+}
+
+/* Botão de Destaque (Roxo e Dourado) */
+.btn-destaque {
+    display: inline-block;
+    background-color: var(--cor-primaria); /* Fundo Roxo */
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.1rem;
+    padding: 12px 25px;
+    border-radius: 5px;
+    border: 2px solid var(--cor-primaria);
+    transition: all 0.3s ease;
+}
+
+.btn-destaque:hover {
+    background-color: transparent;
+    color: var(--cor-destaque); /* Texto Dourado no hover */
+    border-color: var(--cor-destaque); /* Borda Dourada no hover */
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 30px 0;
+    background-color: var(--cor-fundo-secundario);
+    color: var(--cor-texto-secundario);
+    margin-top: 40px;
+}
